@@ -30,7 +30,7 @@ public class WorkflowTest extends AbstractProcessEngineRuleTest {
     assertThat(processInstance).isStarted()
         .task()
         .hasDefinitionKey("say-hello")
-        .hasCandidateUser("ela")
+        .hasCandidateUser("ela") // this is from the bpmn file. This is not the admin user from yaml file.
         .isNotAssigned();
   }
 

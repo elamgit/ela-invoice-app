@@ -31,3 +31,6 @@ build/
 
 ### VS Code ###
 .vscode/
+
+##custom
+camunda-h2-database*
