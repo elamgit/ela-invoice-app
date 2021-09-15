@@ -25,9 +25,16 @@ This is a test spring boot camunda app.
   - Stop the application and delete process.bpmn from resources folder.
   - Copy the bpmn files(ignore the v1 and copy only the v2), dmn file, invoice.pdf file and the META-INF folder with its processes.xml file from https://github.com/camunda/camunda-bpm-platform/tree/master/examples/invoice/src/main/resources to the resources folder.
   - Copy the forms from https://github.com/camunda/camunda-bpm-platform/tree/master/examples/invoice/src/main/webapp/forms to src/main/resources/static/forms
+  - Copy the service classes from https://github.com/camunda/camunda-bpm-platform/tree/master/examples/invoice/src/main/java/org/camunda/bpm/example/invoice/service
+  - Change references to org.camunda.bpm.example.invoice.service.ArchiveInvoiceService to this project's structure. 
   - Ignore the test in WorkflowTest case for now. It will fail since the bpmn files have changed.
   - Rename Application.java to InvoiceApplication.java
   - Add @EnableProcessApplication annotation to InvoiceApplication.java (forms will not work if this is not done. refer https://www.youtube.com/watch?v=ZFwS1WJUKCU&t=358s)
   - Start InvoiceApplication.java and test in browser.
   - Note - I was able to get the process going only after creating a group called accounting and adding the user "user1" to this group.
+  - Commit
+- Fix test case
+  - try to copy from https://github.com/camunda/camunda-bpm-platform/blob/master/examples/invoice/src/test/java/org/camunda/bpm/example/invoice/InvoiceTestCase.java
+  - testHappyPathV2()
+  - Commit
   
